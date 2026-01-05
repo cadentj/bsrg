@@ -1,0 +1,43 @@
+[
+    {
+      "id": "memory-allocators",
+      "title": "Memory Allocators",
+      "date": "2025-01-11",
+      "current": true,
+      "description": "How do general-purpose memory allocators work? We'll explore jemalloc and mimalloc, learning about arenas, thread caching, and the tradeoffs between speed, fragmentation, and memory overhead.",
+      "links": [
+        {
+          "text": "jemalloc (2006)",
+          "url": "https://www.bsdcan.org/2006/papers/jemalloc.pdf"
+        },
+        {
+          "text": "mimalloc (2019)",
+          "url": "https://www.microsoft.com/en-us/research/uploads/prod/2019/06/mimalloc-tr-v1.pdf"
+        },
+        {
+          "text": "Zig's GPA source",
+          "url": "https://github.com/ziglang/zig/blob/0.11.0/lib/std/heap/general_purpose_allocator.zig"
+        }
+      ]
+    },
+    {
+      "id": "distributed-consensus",
+      "title": "Distributed Consensus",
+      "date": "2025-01-18",
+      "description": "Consensus is the backbone of reliable distributed systems. We'll read about Raft, a protocol designed for understandability, and explore how it's implemented in practice.",
+      "links": [
+        {
+          "text": "Raft paper",
+          "url": "https://raft.github.io/raft.pdf"
+        },
+        {
+          "text": "Raft visualization",
+          "url": "https://thesecretlivesofdata.com/raft/"
+        },
+        {
+          "text": "etcd/raft source",
+          "url": "https://github.com/etcd-io/raft"
+        }
+      ]
+    }
+  ]

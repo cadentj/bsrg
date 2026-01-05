@@ -3,382 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BSRG — Boston Systems Reading Group</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #fafaf9;
-      color: #292524;
-      line-height: 1.7;
-      font-size: 17px;
-    }
-    
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: #1c1917;
-      letter-spacing: -0.02em;
-    }
-    
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #1c1917;
-    }
-    
-    p { margin-bottom: 1rem; color: #57534e; }
-    
-    em { font-style: italic; }
-    
-    .intro { margin-bottom: 2.5rem; }
-    
-    .intro p.tagline {
-      font-size: 1.15rem;
-      color: #78716c;
-    }
-    
-    .intro p.excited {
-      font-size: 1.1rem;
-      font-style: italic;
-      color: #44403c;
-      margin-top: 1.5rem;
-    }
-    
-    .hero {
-      background: linear-gradient(135deg, #ffe4e6, #fef3c7);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 3rem;
-    }
-    
-    .hero img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    
-    .join-btn {
-      display: block;
-      text-align: center;
-      background: #e11d48;
-      color: white;
-      padding: 0.875rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-family: system-ui, sans-serif;
-      font-weight: 500;
-      transition: background 0.2s;
-    }
-    
-    .join-btn:hover { background: #be123c; }
-    
-    hr {
-      border: none;
-      border-top: 1px solid #e7e5e4;
-      margin: 2rem 0;
-    }
-    
-    .weeks { margin-bottom: 3rem; }
-    
-    .week {
-      border: 1px solid #e7e5e4;
-      border-radius: 8px;
-      margin-bottom: 0.75rem;
-      background: white;
-    }
-    
-    .week summary {
-      padding: 1rem 1.25rem;
-      cursor: pointer;
-      list-style: none;
-    }
-    
-    .week summary::-webkit-details-marker { display: none; }
-    
-    .week summary::after {
-      content: '+';
-      float: right;
-      color: #a8a29e;
-      font-size: 1.25rem;
-      font-weight: 300;
-    }
-    
-    .week[open] summary::after { content: '−'; }
-    
-    .week-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.25rem;
-      font-family: system-ui, sans-serif;
-      font-size: 0.75rem;
-      color: #a8a29e;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    
-    .week-title {
-      font-size: 1.1rem;
-      color: #292524;
-    }
-    
-    .week-title strong { color: #e11d48; }
-    
-    .week-content {
-      padding: 0 1.25rem 1.25rem;
-      border-top: 1px solid #f5f5f4;
-    }
-    
-    .week-content p {
-      margin-top: 1rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    .week-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 0.5rem;
-    }
-    
-    .week-links a {
-      color: #e11d48;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    
-    .week-links a:hover { text-decoration: underline; }
-    
-    .week-links .sep { color: #d6d3d1; }
-    
-    .organizers {
-      background: white;
-      border: 1px solid #e7e5e4;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-    
-    .heart { color: #e11d48; }
-    
-    footer {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid #e7e5e4;
-    }
-  </style>
+  <title>BSRG - Boston Systems Reading Group</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header class="intro">
-      <h1>BSRG</h1>
-      <p class="tagline">A place for people to learn about <em>computer systems</em> together.</p>
-      <p>Computer systems are the building blocks of applications and the fabric that ties them together. (Databases, networks, virtualization, programming languages, compilers, distributed algorithms, optimizers, orchestrators, verifiers, libraries, …)</p>
-      <p>We meet weekly in Boston. Each week, we pick a different topic in computer systems, read about it, and discuss together.</p>
-      <p>If you're not an expert, you can still come by! We welcome people from all backgrounds. Technology is used by everyone, and diverse experiences enrich communal discourse. The goal here is to learn, not to make commercial software.</p>
-      <p class="excited">Computers are pretty cool; let's explore!</p>
-    </header>
+  <h1>BSRG</h1>
+  <p><strong>Boston Systems Reading Group</strong></p>
 
-    <div class="hero">
-      <a href="mailto:bsrg@example.com?subject=Joining%20BSRG&body=Hi%2C%0A%0A(please%20tell%20me%20a%20couple%20sentences%20about%20yourself!)%0A%0A(e.g.%3A%20a%20song%20you%20like%2C%20your%20first%20computer%2C%20your%20favorite%20spot%20in%20Boston%2C%20etc.)" class="join-btn">Join BSRG</a>
-    </div>
+  <p>
+    A place for people to learn about <em>computer systems</em> together.
+  </p>
 
-    <section class="weeks">
-      <h2>Weekly Topics</h2>
-      <p>Each week we dive into a different topic. We read during the session because sharing knowledge with others is more fun, provides helpful context, and builds a community deeply valuing <em>curiosity</em> and <em>individual empowerment</em>.</p>
-      <hr>
+  <p>
+    Computer systems are the building blocks of applications and the fabric
+    that ties them together. Databases, networks, compilers, distributed
+    algorithms, virtualization, programming languages, and more.
+  </p>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 1</span> — <span>Jan 12, 2025</span></div>
-          <div class="week-title">Writing <strong>git</strong> from scratch</div>
-        </summary>
-        <div class="week-content">
-          <p>Git is a version control system used by most of the world's software developers. What's under the hood? Let's explore content-addressed storage and hash trees.</p>
-          <div class="week-links">
-            <a href="https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/">Commits are snapshots, not diffs</a><span class="sep">•</span>
-            <a href="https://wyag.thb.lt/">Write yourself a Git</a>
-          </div>
-        </div>
-      </details>
+  <p>
+    We meet regularly in Boston. All are welcome, regardless of background.
+    The goal is to learn together, not to be an expert.
+  </p>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 2</span> — <span>Jan 19, 2025</span></div>
-          <div class="week-title">Perspectives on <strong>async</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>Cooperative and preemptive multitasking, schedulers, concurrency vs parallelism. Case studies in Go and Rust internals.</p>
-          <div class="week-links">
-            <a href="https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/">What Color is Your Function?</a><span class="sep">•</span>
-            <a href="https://blog.nindalf.com/posts/how-goroutines-work/">How Goroutines Work</a><span class="sep">•</span>
-            <a href="https://os.phil-opp.com/async-await/">Async/Await</a>
-          </div>
-        </div>
-      </details>
+  <p>
+    <a href="https://luma.com/bsrg">Join BSRG on Luma</a>
+  </p>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 3</span> — <span>Jan 26, 2025</span></div>
-          <div class="week-title">The database <strong>storage</strong> layer</div>
-        </summary>
-        <div class="week-content">
-          <p>Storage is at the heart of databases, lying below execution and query planning. Let's learn about them and build our own.</p>
-          <div class="week-links">
-            <a href="https://15445.courses.cs.cmu.edu/fall2019/notes/03-storage1.pdf">Disk-Oriented DBMS Overview</a><span class="sep">•</span>
-            <a href="http://www.benstopford.com/2015/02/14/log-structured-merge-trees/">LSM Trees</a><span class="sep">•</span>
-            <a href="https://www.goodreads.com/book/show/44647144-database-internals">Database Internals</a>
-          </div>
-        </div>
-      </details>
+  <hr>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 4</span> — <span>Feb 2, 2025</span></div>
-          <div class="week-title">Virtualization with <strong>KVM</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>Computers tend to produce more copies of themselves. Let's see how virtualization and emulation work on the OS and machine levels.</p>
-          <div class="week-links">
-            <a href="https://bellard.org/jslinux/">JSLinux</a><span class="sep">•</span>
-            <a href="https://developer.ibm.com/articles/l-virtio/">Virtio</a><span class="sep">•</span>
-            <a href="https://crosvm.dev/book/">Book of crosvm</a>
-          </div>
-        </div>
-      </details>
+  <h2>Topics</h2>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 5</span> — <span>Feb 9, 2025</span></div>
-          <div class="week-title">Structured data <strong>encoding</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>Schema-based binary formats for specifying and serializing structured data. Design tradeoffs for RPCs, data archiving, and OLAP.</p>
-          <div class="week-links">
-            <a href="https://protobuf.dev/programming-guides/encoding/">Protocol Buffers Encoding</a><span class="sep">•</span>
-            <a href="https://capnproto.org/">Cap'n Proto</a><span class="sep">•</span>
-            <a href="https://arrow.apache.org/docs/format/Columnar.html">Apache Arrow</a>
-          </div>
-        </div>
-      </details>
+  <hr>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 6</span> — <span>Feb 16, 2025</span></div>
-          <div class="week-title">Compression with <strong>zstd</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>Exploring state-of-the-art lossless data compression. How do you pack big things in a small package, fast?</p>
-          <div class="week-links">
-            <a href="https://blog.coderspirit.xyz/blog/2023/06/04/exploring-the-lz77-algorithm/">LZ77 Exploration</a><span class="sep">•</span>
-            <a href="https://engineering.fb.com/2016/08/31/core-infra/smaller-and-faster-data-compression-with-zstandard/">Zstd blog post</a><span class="sep">•</span>
-            <a href="https://github.com/facebook/zstd/blob/v1.5.5/doc/zstd_compression_format.md">Zstd spec</a>
-          </div>
-        </div>
-      </details>
+<details open>
+  <summary>
+    <span class="summary-date">Jan 2025</span>
+    <strong>Memory Allocators</strong>
+  </summary>
+  <p>How do general-purpose memory allocators work? We'll explore jemalloc and mimalloc, learning about arenas, thread caching, and the tradeoffs between speed, fragmentation, and memory overhead.</p>
+  <ul>
+          <li><a href="https://www.bsdcan.org/2006/papers/jemalloc.pdf">jemalloc (2006)</a></li>
+      <li><a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/06/mimalloc-tr-v1.pdf">mimalloc (2019)</a></li>
+      <li><a href="https://github.com/ziglang/zig/blob/0.11.0/lib/std/heap/general_purpose_allocator.zig">Zig's GPA source</a></li>
+  </ul>
+</details>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 7</span> — <span>Feb 23, 2025</span></div>
-          <div class="week-title">Linux <strong>executables</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>What goes into executables and dynamic linking? How much is engineered versus operating system magic?</p>
-          <div class="week-links">
-            <a href="https://fasterthanli.me/series/making-our-own-executable-packer">Making our own executable packer</a>
-          </div>
-        </div>
-      </details>
+<hr>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 8</span> — <span>Mar 2, 2025</span></div>
-          <div class="week-title">Memory <strong>allocators</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>A discussion of general-purpose memory allocators. We'll focus on jemalloc and the newer mimalloc.</p>
-          <div class="week-links">
-            <a href="https://www.bsdcan.org/2006/papers/jemalloc.pdf">jemalloc (2006)</a><span class="sep">•</span>
-            <a href="https://www.microsoft.com/en-us/research/uploads/prod/2019/06/mimalloc-tr-v1.pdf">mimalloc (2019)</a>
-          </div>
-        </div>
-      </details>
+<details>
+  <summary>
+    <span class="summary-date">Jan 2025</span>
+    <strong>Distributed Consensus</strong>
+  </summary>
+  <p>Consensus is the backbone of reliable distributed systems. We'll read about Raft, a protocol designed for understandability, and explore how it's implemented in practice.</p>
+  <ul>
+          <li><a href="https://raft.github.io/raft.pdf">Raft paper</a></li>
+      <li><a href="https://thesecretlivesofdata.com/raft/">Raft visualization</a></li>
+      <li><a href="https://github.com/etcd-io/raft">etcd/raft source</a></li>
+  </ul>
+</details>
 
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 9</span> — <span>Mar 9, 2025</span></div>
-          <div class="week-title"><strong>io_uring</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>Reading about an up-and-coming Linux subsystem for high-performance async I/O. Memory access models and buffer ownership.</p>
-          <div class="week-links">
-            <a href="https://unixism.net/loti/async_intro.html">Lord of the io_uring</a><span class="sep">•</span>
-            <a href="https://without.boats/blog/io-uring/">Notes on io-uring</a><span class="sep">•</span>
-            <a href="https://github.com/tokio-rs/io-uring">tokio-rs/io-uring</a>
-          </div>
-        </div>
-      </details>
-
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 10</span> — <span>Mar 16, 2025</span></div>
-          <div class="week-title">Distributed <strong>training</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>Training big ML models is the elephant in the room. Everyone starts by talking about compute, but it ends up being mostly about networking.</p>
-          <div class="week-links">
-            <a href="https://andrew.gibiansky.com/blog/machine-learning/baidu-allreduce/">Allreduce (2017)</a><span class="sep">•</span>
-            <a href="https://lilianweng.github.io/posts/2021-09-25-train-large/">How to Train Really Large Models on Many GPUs?</a>
-          </div>
-        </div>
-      </details>
-
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 11</span> — <span>Mar 23, 2025</span></div>
-          <div class="week-title"><strong>FoundationDB</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>A distributed, transactional key-value store that underpins several new database systems. Strict serializable and lock-free.</p>
-          <div class="week-links">
-            <a href="https://www.foundationdb.org/files/fdb-paper.pdf">FoundationDB (SIGMOD '21)</a><span class="sep">•</span>
-            <a href="https://apple.github.io/foundationdb/technical-overview.html">Technical Overview</a>
-          </div>
-        </div>
-      </details>
-
-      <details class="week">
-        <summary>
-          <div class="week-header"><span>Week 12</span> — <span>Mar 30, 2025</span></div>
-          <div class="week-title">Memory <strong>models</strong></div>
-        </summary>
-        <div class="week-content">
-          <p>A series on how memory consistency is preserved by multicore processors: in hardware, programming languages, and Go.</p>
-          <div class="week-links">
-            <a href="https://research.swtch.com/mm">Memory Models (rsc)</a>
-          </div>
-        </div>
-      </details>
-    </section>
-
-    <section class="organizers">
-      <h2>Organizers</h2>
-      <p>This is being run by the Boston systems community! We believe that having diverse thoughts is important to learning together as a collective.</p>
-      <p>BSRG wouldn't be where it is today without you. Thank you for stopping by! <span class="heart">❤️</span></p>
-    </section>
-
-    <footer>
-      <a href="mailto:bsrg@example.com?subject=Joining%20BSRG&body=Hi%2C%0A%0A(please%20tell%20me%20a%20couple%20sentences%20about%20yourself!)%0A%0A(e.g.%3A%20a%20song%20you%20like%2C%20your%20first%20computer%2C%20your%20favorite%20spot%20in%20Boston%2C%20etc.)" class="join-btn">Join BSRG</a>
-    </footer>
-  </div>
 </body>
 </html>
