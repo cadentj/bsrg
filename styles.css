@@ -8,14 +8,44 @@ body {
     padding: 1rem;
 }
 
+h2 {
+    margin-top: 3rem;
+}
+
 summary {
     list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+summary::after {
+    content: "+";
+    margin-left: auto;
+}
+
+details[open] > summary::after {
+    content: "−";
+}
+
+details {
+    margin: 0 0.5rem;
 }
 
 .summary-date {
     padding-right: 2rem;
 }
 
-details {
-    cursor: pointer;
+.link-group {
+    margin-top: 1.5rem;
+}
+
+.link-group:first-of-type {
+    margin-top: 1rem;
+}
+
+.link-group h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
 }

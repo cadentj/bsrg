@@ -1,43 +1,86 @@
 [
-    {
-      "id": "memory-allocators",
-      "title": "Memory Allocators",
-      "date": "2025-01-11",
-      "current": true,
-      "description": "How do general-purpose memory allocators work? We'll explore jemalloc and mimalloc, learning about arenas, thread caching, and the tradeoffs between speed, fragmentation, and memory overhead.",
-      "links": [
-        {
-          "text": "jemalloc (2006)",
-          "url": "https://www.bsdcan.org/2006/papers/jemalloc.pdf"
-        },
-        {
-          "text": "mimalloc (2019)",
-          "url": "https://www.microsoft.com/en-us/research/uploads/prod/2019/06/mimalloc-tr-v1.pdf"
-        },
-        {
-          "text": "Zig's GPA source",
-          "url": "https://github.com/ziglang/zig/blob/0.11.0/lib/std/heap/general_purpose_allocator.zig"
-        }
-      ]
-    },
-    {
-      "id": "distributed-consensus",
-      "title": "Distributed Consensus",
-      "date": "2025-01-18",
-      "description": "Consensus is the backbone of reliable distributed systems. We'll read about Raft, a protocol designed for understandability, and explore how it's implemented in practice.",
-      "links": [
-        {
-          "text": "Raft paper",
-          "url": "https://raft.github.io/raft.pdf"
-        },
-        {
-          "text": "Raft visualization",
-          "url": "https://thesecretlivesofdata.com/raft/"
-        },
-        {
-          "text": "etcd/raft source",
-          "url": "https://github.com/etcd-io/raft"
-        }
-      ]
-    }
-  ]
+  {
+    "id": "containers",
+    "title": "Containers",
+    "date": "2025-01-17",
+    "current": true,
+    "description": "Containers let us run and distribute applications. How do they work under the hood?",
+    "note": "This is a shorter, one week topic while we're figuring out the right format.",
+    "linkGroups": [
+      {
+        "title": "Readings",
+        "links": [
+          {
+            "text": "Docker Tutorial",
+            "url": "https://docs.docker.com/get-started/"
+          },
+          {
+            "text": "What even is a container?",
+            "url": "https://jvns.ca/blog/2016/10/10/what-even-is-a-container/"
+          },
+          {
+            "text": "How Containers Work!",
+            "url": "https://wizardzines.com/zines/containers/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "firecracker",
+    "title": "Firecracker",
+    "date": "2025-01-24 to 31",
+    "hidden": true,
+    "current": false,
+    "description": "Micro-virtualization for serverless computing. How does AWS Lambda actually work? We'll explore Firecracker's design, production use cases, and build a minimal hypervisor.",
+    "linkGroups": [
+      {
+        "title": "Design & Source",
+        "links": [
+          {
+            "text": "Firecracker design doc",
+            "url": "https://github.com/firecracker-microvm/firecracker/blob/main/docs/design.md"
+          },
+          {
+            "text": "Firecracker NSDI '20 paper",
+            "url": "https://www.usenix.org/system/files/nsdi20-paper-agache.pdf"
+          },
+          {
+            "text": "Firecracker source",
+            "url": "https://github.com/firecracker-microvm/firecracker/tree/main/src/vmm/src"
+          }
+        ]
+      },
+      {
+        "title": "Production Case Studies",
+        "links": [
+          {
+            "text": "CodeSandbox: Cloning a running VM in 2 seconds",
+            "url": "https://codesandbox.io/blog/how-we-clone-a-running-vm-in-2-seconds"
+          },
+          {
+            "text": "Modal: Memory Snapshots",
+            "url": "https://modal.com/blog/mem-snapshots"
+          },
+          {
+            "text": "Modal: Fast lazy container loading",
+            "url": "https://modal.com/blog/jono-containers-talk"
+          },
+          {
+            "text": "Cognition: Blockdiff",
+            "url": "https://cognition.ai/blog/blockdiff"
+          }
+        ]
+      },
+      {
+        "title": "Project",
+        "links": [
+          {
+            "text": "Hypervisor in 1,000 Lines",
+            "url": "https://1000hv.seiya.me/en/"
+          }
+        ]
+      }
+    ]
+  }
+]

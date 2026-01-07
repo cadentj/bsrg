@@ -2,15 +2,7 @@
 """Build script for BSRG website. Generates index.html from template and topics.json."""
 
 import json
-from datetime import datetime
 from pathlib import Path
-
-
-def format_date(date_str: str) -> str:
-    """Convert 2025-01-11 to Jan 2025."""
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    return dt.strftime("%b %Y")
-
 
 SESSION_DETAIL = """
 <details{open_attr}>
@@ -18,30 +10,48 @@ SESSION_DETAIL = """
     <span class="summary-date">{date_formatted}</span>
     <strong>{title}</strong>
   </summary>
-  <p>{description}</p>
-  <ul>
-    {links}
-  </ul>
+  <p>{description}</p>{note}
+  {link_groups}
 </details>
 """.strip()
+
+
+def generate_link_groups_html(link_groups: list[dict]) -> str:
+    """Generate HTML for link groups."""
+    groups_html = []
+    for group in link_groups:
+        links_html = "\n".join(
+            f'      <li><a href="{link["url"]}">{link["text"]}</a></li>'
+            for link in group["links"]
+        )
+        group_html = f"""  <div class="link-group">
+    <h4>{group["title"]}</h4>
+    <ul>
+{links_html}
+    </ul>
+  </div>"""
+        groups_html.append(group_html)
+    return "\n\n".join(groups_html)
 
 
 def generate_topic_html(topic: dict) -> str:
     """Generate HTML for a single topic."""
     open_attr = " open" if topic.get("current") else ""
-    date_formatted = format_date(topic["date"])
+    date = topic.get("date", "")
 
-    links_html = "\n".join(
-        f'      <li><a href="{link["url"]}">{link["text"]}</a></li>'
-        for link in topic["links"]
-    )
+    link_groups = topic.get("linkGroups", [])
+    link_groups_html = generate_link_groups_html(link_groups)
+
+    note = topic.get("note")
+    note_html = f"\n  <p><em>Note: {note}</em></p>" if note else ""
 
     return SESSION_DETAIL.format(
         open_attr=open_attr,
-        date_formatted=date_formatted,
+        date_formatted=date,
         title=topic["title"],
         description=topic["description"],
-        links=links_html,
+        note=note_html,
+        link_groups=link_groups_html,
     )
 
 
@@ -56,11 +66,14 @@ def build():
     with open(root / "template.html") as f:
         template = f.read()
 
-    # Generate topics HTML with <hr> separators
+    # Generate topics HTML with <hr> separators (skip hidden topics)
     topics_html_parts = []
     for topic in topics:
+        if topic.get("hidden"):
+            continue
         topics_html_parts.append("<hr>")
         topics_html_parts.append(generate_topic_html(topic))
+    topics_html_parts.append("<hr>")
 
     topics_html = "\n\n".join(topics_html_parts)
 
