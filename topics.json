@@ -11,16 +11,24 @@
         "title": "Readings",
         "links": [
           {
-            "text": "Docker Tutorial",
-            "url": "https://docs.docker.com/get-started/"
-          },
-          {
             "text": "What even is a container?",
             "url": "https://jvns.ca/blog/2016/10/10/what-even-is-a-container/"
           },
           {
             "text": "How Containers Work!",
             "url": "https://wizardzines.com/zines/containers/"
+          },
+          {
+            "text" : "Containers from Scratch",
+            "url" : "https://github.com/lizrice/containers-from-scratch"
+          },
+          {
+            "text": "Docker Tutorial",
+            "url": "https://docs.docker.com/get-started/"
+          },
+          {
+          "text" : "runc",
+            "url" : "https://github.com/opencontainers/runc"
           }
         ]
       }
