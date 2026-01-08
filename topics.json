@@ -2,7 +2,7 @@
   {
     "id": "containers",
     "title": "Containers",
-    "date": "2025-01-17",
+    "date": "2025-01-18",
     "current": true,
     "description": "Containers let us run and distribute applications. How do they work under the hood?",
     "note": "This is a shorter, one week topic while we're figuring out the right format.",
