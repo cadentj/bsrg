@@ -1,9 +1,73 @@
 [
   {
+    "id": "scheduling",
+    "title": "Cluster Scheduling, Autoscaling & Task Schedulers",
+    "date": "2025-01-25 to 02-01",
+    "current": true,
+    "description": "How do large-scale systems allocate resources, schedule tasks, and scale workloads?",
+    "linkGroups": [
+      {
+        "title": "Cluster Scheduling",
+        "links": [
+          {
+            "text": "Dominant Resource Fairness",
+            "url": "https://amplab.cs.berkeley.edu/wp-content/uploads/2011/06/Dominant-Resource-Fairness-Fair-Allocation-of-Multiple-Resource-Types.pdf"
+          },
+          {
+            "text": "Borg, Omega, and Kubernetes",
+            "url": "https://queue.acm.org/detail.cfm?id=2898444"
+          },
+          {
+            "text": "Kubernetes (O'Reilly)",
+            "url": "https://theswissbay.ch/pdf/Books/Computer%20science/O%27Reilly/kubernetes.pdf"
+          },
+          {
+            "text": "SLURM",
+            "url": "https://slurm.schedmd.com/slurm_design.pdf"
+          },
+          {
+            "text": "Twine",
+            "url": "https://www.usenix.org/system/files/osdi20-tang.pdf"
+          },
+          {
+            "text": "Mesos",
+            "url": "https://dl.acm.org/doi/10.5555/1972457.1972488"
+          }
+        ]
+      },
+      {
+        "title": "Autoscaling",
+        "links": [
+          {
+            "text": "Autopilot",
+            "url": "https://research.google/pubs/autopilot-workload-autoscaling-at-google-scale/"
+          },
+          {
+            "text": "Serverless in the Wild",
+            "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2020/05/serverless-ATC20.pdf"
+          }
+        ]
+      },
+      {
+        "title": "Task Schedulers",
+        "links": [
+          {
+            "text": "Ray",
+            "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-30.pdf#page=18.23"
+          },
+          {
+            "text": "Ray Serve",
+            "url": "https://docs.ray.io/en/latest/serve/advanced-guides/advanced-autoscaling.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "containers",
     "title": "Containers",
     "date": "2025-01-18",
-    "current": true,
+    "current": false,
     "description": "Containers let us run and distribute applications. How do they work under the hood?",
     "note": "This is a shorter, one week topic while we're figuring out the right format.",
     "linkGroups": [
