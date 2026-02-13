@@ -1,9 +1,43 @@
 [
   {
+    "id": "llm-inference",
+    "title": "LLM Serving Systems",
+    "date": "2025-02-15 and 03-01",
+    "current": true,
+    "description": "How do we serve large language models at scale?",
+    "linkGroups": [
+      {
+        "title": "Readings",
+        "links": [
+          {
+            "text": "All About Transformer Inference",
+            "url": "https://jax-ml.github.io/scaling-book/inference/"
+          },
+          {
+            "text": "Anatomy of a High-Throughput LLM Inference System",
+            "url": "https://www.aleksagordic.com/blog/vllm"
+          },
+          {
+            "text": "Paged Attention from First Principles",
+            "url": "https://hamzaelshafie.bearblog.dev/paged-attention-from-first-principles-a-view-inside-vllm/"
+          },
+          {
+            "text": "Source Code Reading: Mini-SGLang",
+            "url": "https://lmsys.org/blog/2025-12-17-minisgl/"
+          },
+          {
+            "text": "PIE: Programmable LLM Serving",
+            "url": "https://pie-project.org/"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "scheduling",
     "title": "Cluster Scheduling, Autoscaling & Task Schedulers",
     "date": "2025-02-01 and 02-08",
-    "current": true,
+    "current": false,
     "description": "How do large-scale systems allocate resources, schedule tasks, and scale workloads?",
     "note": "Reading group on 01-25 was postponed due to a winter storm.",
     "linkGroups": [
