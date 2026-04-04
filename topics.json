@@ -1,9 +1,36 @@
 [
   {
+    "id": "computer-use-agents",
+    "title": "Computer Use Agents",
+    "date": "2026-04-05",
+    "current": true,
+    "description": "How do we build predictive models for computer use?",
+    "note": "Special week-long topic. We're trying a pair-programming format where one person codes with no AI, the other pilots and uses AI.",
+    "linkGroups": [
+      {
+        "title": "Readings",
+        "links": [
+          {
+            "text": "Creating General User Models from Computer Use",
+            "url": "https://arxiv.org/abs/2505.10831"
+          },
+          {
+            "text": "Learning Next Action Predictors from Human-Computer Interaction (NAP)",
+            "url": "https://generalusermodels.github.io/nap/"
+          },
+          {
+            "text": "MolmoWeb: An open agent for automating web tasks",
+            "url": "https://allenai.org/blog/molmoweb"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "gpu-programming",
     "title": "GPU Kernel Programming",
     "date": "2026-03-22 and 03-29",
-    "current": true,
+    "current": false,
     "description": "Let's write some fast numeric code!",
     "linkGroups": [
       {
