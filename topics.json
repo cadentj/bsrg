@@ -1,9 +1,35 @@
 [
   {
+    "id": "javascript-modern-stack",
+    "title": "JavaScript",
+    "date": "2026-04-19 and 04-26 and 05-03",
+    "current": true,
+    "description": "The history and design of JavaScript as a language, runtime, and tooling ecosystem.",
+    "linkGroups": [
+      {
+        "title": "Readings",
+        "links": [
+          {
+            "text": "React from Scratch",
+            "url": "https://github.com/RobPruzan/react-scratch"
+          },
+          {
+            "text": "React Fiber Architecture",
+            "url": "https://github.com/acdlite/react-fiber-architecture"
+          },
+          {
+            "text": "Mini Typescript",
+            "url": "https://github.com/sandersn/mini-typescript"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "computer-use-agents",
     "title": "Computer Use Agents",
     "date": "2026-04-05",
-    "current": true,
+    "current": false,
     "description": "How do we build predictive models for computer use?",
     "note": "Special week-long topic. We're trying a pair-programming format where one person codes with no AI, the other pilots and uses AI.",
     "linkGroups": [
