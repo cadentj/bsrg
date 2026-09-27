@@ -1,9 +1,31 @@
 [
   {
+    "id": "memory-hierarchy-and-caches",
+    "title": "CPU Caches & The Memory Hierarchy",
+    "date": "2026-10-04",
+    "current": true,
+    "description": "Understanding CPU caches, the memory hierarchy, and writing cache-friendly code. <a href=\"https://luma.com/ub6wjvxw\">https://luma.com/ub6wjvxw</a>",
+    "linkGroups": [
+      {
+        "title": "Readings",
+        "links": [
+          {
+            "text": "CSAPP (Ch. 6: The Memory Hierarchy)",
+            "url": "https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/books/CSAPP_2016.pdf"
+          },
+          {
+            "text": "What Every Programmer Should Know About Memory (Sec. 3 & 6.2.1)",
+            "url": "https://people.freebsd.org/~lstewart/articles/cpumemory.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "javascript-modern-stack",
     "title": "JavaScript",
     "date": "2026-04-19 and 04-26 and 05-03",
-    "current": true,
+    "current": false,
     "description": "The history and design of JavaScript as a language, runtime, and tooling ecosystem.",
     "linkGroups": [
       {
@@ -84,8 +106,8 @@
             "url": "https://github.com/gpu-mode/Triton-Puzzles/"
           },
           {
-            "text" : "CuTe Notebooks",
-            "url" : "https://docs.nvidia.com/cutlass/latest/media/docs/pythonDSL/cute_dsl_general/notebooks.html"
+            "text": "CuTe Notebooks",
+            "url": "https://docs.nvidia.com/cutlass/latest/media/docs/pythonDSL/cute_dsl_general/notebooks.html"
           }
         ]
       }
@@ -210,16 +232,16 @@
             "url": "https://wizardzines.com/zines/containers/"
           },
           {
-            "text" : "Containers from Scratch",
-            "url" : "https://github.com/lizrice/containers-from-scratch"
+            "text": "Containers from Scratch",
+            "url": "https://github.com/lizrice/containers-from-scratch"
           },
           {
             "text": "Docker Tutorial",
             "url": "https://docs.docker.com/get-started/"
           },
           {
-          "text" : "runc",
-            "url" : "https://github.com/opencontainers/runc"
+            "text": "runc",
+            "url": "https://github.com/opencontainers/runc"
           }
         ]
       }
